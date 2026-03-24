@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Contacto - CV & Portfolio de Joaquín Caturelli</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Formulario de contacto del portfolio" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://res.cloudinary.com/do0white9/image/upload/v1773181650/Bootcamp/Proyecto-1/joaquin_circulo_eba1c5.png"
+    />
+    <script type="module" src="script.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header-content">
+        <div class="logo">
+          <a href="./index.html">
+            <img
+              src="https://res.cloudinary.com/do0white9/image/upload/v1773181650/Bootcamp/Proyecto-1/joaquin_circulo_eba1c5.png"
+              alt="Logo JC"
+            />
+          </a>
+        </div>
+
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="index.html#cheatsheets">Cheatsheets</a></li>
+            <li><a href="index.html#recursos">Recursos</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Menú de navegación"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <section id="contacto" class="hero">
+          <h1>Contacto</h1>
+          <h2 class="contacto-intro">
+            ¿Tienes alguna pregunta o propuesta? Rellena el formulario y me
+            pondré en contacto contigo lo antes posible.
+          </h2>
+          <div class="contacto-container">
+            <form class="form">
+              <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="Tu nombre"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="tu@email.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="asunto">Asunto:</label>
+                <input
+                  type="text"
+                  id="asunto"
+                  name="asunto"
+                  placeholder="Asunto del mensaje"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="mensaje">Mensaje:</label>
+                <textarea
+                  name="mensaje"
+                  id="mensaje"
+                  rows="10"
+                  placeholder="Escribe tu mensaje aqui..."
+                  required
+                ></textarea>
+              </div>
+              <div class="botones">
+                <input type="submit" value="Enviar mensaje" />
+                <input type="reset" value="Borrar" />
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-container">
+        <nav class="footer-nav">
+          <a
+            href="https://www.linkedin.com/in/joaquin-caturelli-0582b2212/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Linkedin</a
+          >
+          <a
+            href="https://github.com/joacocaturelli"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+          <a
+            href="https://www.instagram.com/joacocaturelli/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Instagram</a
+          >
+        </nav>
+        <p>&copy; 2026 Joaquín Caturelli - Fullstack Developer</p>
+      </div>
+    </footer>
+  </body>
+</html>
