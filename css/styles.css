@@ -1,14 +1,14 @@
+/* Importar font roboto y space mono desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Mono&display=swap');
 
+/* Variables CSS reutilizables */
 :root {
   --color-white: #ffffff;
   --blood-red: #890606ff;
   --ink-black: #02111bff;
   --grey: #ccc;
   --beige: #e8e7b5;
-
   --color-grey-dark: rgba(64, 63, 63, 0.8);
-  
 
   --color-border: rgba(0, 0, 0, 0.3);
 
@@ -32,18 +32,7 @@
   --weight-black: 900;
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.5;
-
-  background-color: var(--color-white);
-  color: var(--ink-black);
-
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
+/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ DARK MODE ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
 .dark-mode{
   background-color: var(--color-grey-dark);
   color: var(--color-white);
@@ -63,7 +52,9 @@ body {
   margin: 0 auto;
   padding: 0 var(--spacing-md);
 }
+/*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ DARK MODE ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
 
+/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ HEADER ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
 .header {
   position: fixed;
   top: 0;
@@ -103,7 +94,7 @@ body {
   padding: var(--spacing-xs) 0;
 }
 
-/* efecto para que aparezca una barra debajo */
+/* Efecto para que aparezca una barra debajo de los enlaces de navegacion*/
 .nav-list a::after {
   content: '';
   position: absolute;
@@ -125,6 +116,7 @@ body {
   width: 100%;
 }
 
+/* Botón de modo oscuro */
 #btnModoOscuro {
   transform-origin: center;
   border: none;
@@ -154,6 +146,7 @@ body {
   align-items: center;
 }
 
+/* Botón hamburguesa */
 .hamburger {
   display: flex;
   flex-direction: column;
@@ -163,25 +156,6 @@ body {
   cursor: pointer;
   padding: var(--spacing-xs);
   transition: var(--transition);
-}
-.hamburger.active {
-  transform: rotate(90deg);
-}
-
-.nav-list.active {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: var(--header-height);
-  right: var(--spacing-md);
-  background-color: var(--color-white);
-  padding: var(--spacing-md);
-  border-radius: var(--border-radius);
-  box-shadow: 0 6px 10px var(--color-border);
-}
-
-.hamburger:hover {
-  transform: scale(1.1);
 }
 
 .hamburger span {
@@ -193,11 +167,47 @@ body {
   flex-shrink: 0;
 }
 
+.hamburger:hover {
+  transform: scale(1.1);
+}
+
+.hamburger.active {
+  transform: rotate(90deg);
+}
+
+/* Menu desplegable del boton hamburguesa */
+.nav-list.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: var(--header-height);
+  right: var(--spacing-md);
+  background-color: var(--color-white);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  box-shadow: 0 6px 10px var(--color-border);
+}
+/*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ HEADER ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
+
+/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ MAIN ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
 .main {
   flex: 1;
   padding-top: var(--main-margin-top);
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+
+  background-color: var(--color-white);
+  color: var(--ink-black);
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Seccion principal de la pagina (hero) */
 .hero {
   display: flex;
   flex-direction: column;
@@ -207,6 +217,7 @@ body {
   margin-bottom: var(--spacing-md);
 }
 
+/* Foto de perfil index.html */
 .fotoPerfil {
   border-radius: var(--border-radius);
   box-shadow: 0 6px 10px var(--color-border);
@@ -215,6 +226,7 @@ body {
   margin-bottom: var(--spacing-md);
 }
 
+/* Decoracion de texto */
 .hero h1 {
   font-size: 3rem;
   font-weight: var(--weight-black);
@@ -234,7 +246,6 @@ h2 {
   margin-top: 0;
 }
 
-
 h3 {
   font-size: 1.8rem;
   color: var(--blood-red);
@@ -252,6 +263,7 @@ strong {
   color: var(--blood-red);
 }
 
+/* Foto polaroid about.html */
 .polaroid-container {
   display: flex;
   gap: var(--spacing-md);
@@ -295,6 +307,7 @@ strong {
   margin-bottom: var(--spacing-sm);
 }
 
+/* Contenedor de tarjetas */
 .cards-container {
   display: flex;
   flex-wrap: wrap;
@@ -326,11 +339,40 @@ strong {
   margin-top: var(--spacing-sm);
 }
 
+/* Lista de skills index.html */
+#skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.skill-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-sm);
+}
+
+.tag {
+  background-color: var(--blood-red);
+  color: var(--color-white);
+  padding: var(--spacing-xxs) var(--spacing-xs);
+  border-radius: var(--border-radius);
+  font-size: 12px;
+}
+
 .contacto-container {
   width: 100%;
   max-width: 700px;
 }
 
+/* Formulario de contacto.html */
 .form {
   background: var(--beige);
   padding: var(--spacing-md);
@@ -392,7 +434,9 @@ strong {
   transform: translateY(-2px);
   box-shadow: 0 6px 10px var(--color-border);
 }
+/*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ MAIN ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
 
+/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ FOOTER ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
 .footer {
   background-color: var(--blood-red);
   color: var(--color-white);
@@ -421,34 +465,9 @@ strong {
 .footer-nav a:hover {
   transform: translateY(-2px);
 }
+/*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ FOOTER ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
 
-#skills-container {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-md);
-}
-
-.skill-icon {
-  width: 60px;
-  height: 60px;
-}
-
-.skill-tags {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: var(--spacing-xs);
-  margin-top: var(--spacing-sm);
-}
-
-.tag {
-  background-color: var(--blood-red);
-  color: var(--color-white);
-  padding: var(--spacing-xxs) var(--spacing-xs);
-  border-radius: var(--border-radius);
-  font-size: 12px;
-}
-
+/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ MOBILE FIRST ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
 @media (min-width: 768px) {
   .hamburger {
     display: none;
@@ -459,5 +478,4 @@ strong {
   .fotoPerfil {
     width: 65%;
   }
-  
 }

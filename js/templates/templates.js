@@ -1,3 +1,4 @@
+// Exportar la funcion para renderizar el header.
 export function mainHeaderTemplate() {
 	return `
 	<div class="container header-content">
@@ -41,6 +42,7 @@ export function mainHeaderTemplate() {
 	</div>`;
 }
 
+// Exportar la funcion para renderizar el footer.
 export function mainFooterTemplate() {
 	return `
 	<div class="container footer-container">

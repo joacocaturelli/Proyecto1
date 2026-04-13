@@ -1,3 +1,4 @@
+// Exportar el array de listSkills.
 export const skillsData = [
     {
         name: "HTML",
