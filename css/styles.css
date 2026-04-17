@@ -7,7 +7,7 @@
   --blood-red: #890606ff;
   --ink-black: #02111bff;
   --grey: #ccc;
-  --beige: #e8e7b5;
+  --beige: #eaeac2;
   --color-grey-dark: rgba(64, 63, 63, 0.8);
 
   --color-border: rgba(0, 0, 0, 0.3);
@@ -47,10 +47,8 @@
   width: var(--spacing-md);
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-md);
+.dark-mode .tarjeta {
+  background-color: var(--ink-black);
 }
 /*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ DARK MODE ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
 
@@ -215,6 +213,12 @@ body {
   justify-content: center;
   text-align: center;
   margin-bottom: var(--spacing-md);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
 }
 
 /* Foto de perfil index.html */
