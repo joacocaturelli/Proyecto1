@@ -18,3 +18,9 @@ img {
   height: auto;
   display: block;
 }
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}

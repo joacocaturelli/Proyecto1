@@ -7,8 +7,8 @@
   --blood-red: #890606ff;
   --ink-black: #02111bff;
   --grey: #ccc;
-  --beige: #eaeac2;
-  --color-grey-dark: rgba(64, 63, 63, 0.8);
+  --beige: #ececd0;
+  --color-grey-dark: rgb(64, 63, 63);
 
   --color-border: rgba(0, 0, 0, 0.3);
 
@@ -49,6 +49,33 @@
 
 .dark-mode .tarjeta {
   background-color: var(--ink-black);
+}
+
+.dark-mode .cheatsheet-tarjeta {
+  background-color: var(--ink-black);
+}
+
+.dark-mode .recurso-card {
+  background-color: var(--ink-black);
+}
+
+.dark-mode .cheatsheet-nav{
+  background-color: var(--color-grey-dark);
+  box-shadow: none;
+}
+
+.dark-mode .btn-cheatsheet{
+  background-color: var(--ink-black);
+}
+
+.dark-mode .cs-card{
+  background-color: var(--blood-red);
+  box-shadow: none;
+}
+
+.dark-mode .cs-code{
+  background-color: var(--color-white);
+  color: var(--blood-red);
 }
 /*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ DARK MODE ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
 
@@ -371,6 +398,31 @@ strong {
   font-size: 12px;
 }
 
+#cheatsheets-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+.cheatsheet-tarjeta {
+  flex: 1 1 calc(25% - var(--spacing-md));
+  background-color: var(--beige);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  box-shadow: 0 6px 10px var(--color-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.cheatsheet-tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px var(--color-border);
+}
+
 .contacto-container {
   width: 100%;
   max-width: 700px;
@@ -438,6 +490,114 @@ strong {
   transform: translateY(-2px);
   box-shadow: 0 6px 10px var(--color-border);
 }
+
+#recursos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.btn-tab {
+  background-color: none;
+  color: var(--ink-black);
+  border: none;
+  padding: var(--spacing-md) var(--spacing-md);
+  cursor: pointer;
+  font-weight: var(--weight-bold);
+  font-size: 18px;
+}
+
+.btn-tab:hover {
+  color: var(--blood-red);
+}
+
+.active.btn-tab {
+  background-color: var(--blood-red);
+  color: var(--color-white);
+  border-radius: var(--border-radius);
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: flex;
+  gap: var(--spacing-md);
+  margin: var(--spacing-md);
+}
+
+.recursos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.recurso-card {
+  flex: 1 1 calc(50% - var(--spacing-md));
+  background-color: var(--beige);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  box-shadow: 0 6px 10px var(--color-border);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.recurso-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px var(--color-border);
+}
+
+.cs-card{
+  background-color: var(--beige);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 12px -6px rgba(0,0,0,.25);
+  text-align: left;
+  margin-top: var(--spacing-md);
+  scroll-margin-top: 298px;
+}
+
+.cs-code{
+  background-color: var(--color-white);
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius);
+  box-shadow: inset 0 2px 4px var(--color-border);
+  margin-top: var(--spacing-sm);
+}
+
+.cheatsheet-nav{
+  position: sticky;
+  top: var(--header-height);
+  background-color: var(--color-white);
+  padding: var(--spacing-md) 0;
+  gap: var(--spacing-md);
+  display: none;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-shadow: 0 8px 12px -6px rgba(0,0,0,.25);
+}
+
+.btn-cheatsheet{
+  border: none;
+  padding: var(--spacing-md) var(--spacing-md);
+  cursor: pointer;
+  font-weight: var(--weight-bold);
+  font-size: 18px;
+  background-color: var(--blood-red);
+  color: var(--color-white);
+  border-radius: var(--border-radius);
+}
+
+.btn-cheatsheet:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px var(--color-border);
+}
+
 /*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ MAIN ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
 
 /*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ FOOTER ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
@@ -481,5 +641,8 @@ strong {
   }
   .fotoPerfil {
     width: 65%;
+  }
+  .cheatsheet-nav {
+    display: flex;
   }
 }

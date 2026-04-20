@@ -15,8 +15,8 @@ export function mainHeaderTemplate() {
 			<ul class="nav-list">
 				<li><a href="./about.html">About</a></li>
 				<li><a href="./index.html#skills-section">Skills</a></li>
-				<li><a href="#cheatsheets">Cheatsheets</a></li>
-				<li><a href="#recursos">Recursos</a></li>
+				<li><a href="./index.html#cheatsheets-section">Cheatsheets</a></li>
+				<li><a href="./recursos.html">Recursos</a></li>
 				<li><a href="./contacto.html">Contacto</a></li>
 			</ul>
 		</nav>
